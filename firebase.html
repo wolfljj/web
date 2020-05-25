@@ -4,32 +4,32 @@
 
 <body>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyDSxSYy6jU08CXamPmIp9XnJ0lZ9Avr0HM",
-    authDomain: "flutter-2e83f.firebaseapp.com",
-    databaseURL: "https://flutter-2e83f.firebaseio.com",
-    projectId: "flutter-2e83f",
-    storageBucket: "flutter-2e83f.appspot.com",
-    messagingSenderId: "841766998797",
-    appId: "1:841766998797:web:c0218bb734840b1dc1d644",
-    measurementId: "G-5P6Q0G1VZJ"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  var db = firebase.firestore();
-  db.collection("table_first").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
-    });
-});
-</script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDSxSYy6jU08CXamPmIp9XnJ0lZ9Avr0HM",
+            authDomain: "flutter-2e83f.firebaseapp.com",
+            databaseURL: "https://flutter-2e83f.firebaseio.com",
+            projectId: "flutter-2e83f",
+            storageBucket: "flutter-2e83f.appspot.com",
+            messagingSenderId: "841766998797",
+            appId: "1:841766998797:web:c0218bb734840b1dc1d644",
+            measurementId: "G-5P6Q0G1VZJ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        var db = firebase.firestore();
+        db.collection("table_first").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                console.log(`${doc.id} => ${doc.data()}`);
+            });
+        });
+    </script>
 </body>
